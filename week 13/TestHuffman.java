@@ -39,12 +39,12 @@ class TestHuffman {
             huffmanTable.put(character[i].charAt(0), encoded[i]);
             encodedStr.append(character[i]).append(",").append(encoded[i]).append("\n");
         }
-        saveFile("201502025_table.txt", encodedStr.toString());
+        saveFile("table.txt", encodedStr.toString());
 
         for (int i = 0; i < encodingInput.length(); i++) {
             encodeOutputStr.append(huffmanTable.get(encodingInput.charAt(i)));
         }
-        saveFile("201502025_encoded.txt", encodeOutputStr.toString());
+        saveFile("encoded.txt", encodeOutputStr.toString());
     }
 
     public static void recuTable(BinaryTreeNode tree, String result) {
@@ -116,7 +116,7 @@ class TestHuffman {
             }
         }
 
-        saveFile("201502025_decoded.txt", decodingOutput.toString());
+        saveFile("decoded.txt", decodingOutput.toString());
     }
 
     public static void readEncodedFile(String fileName) {
